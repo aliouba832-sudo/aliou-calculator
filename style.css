@@ -47,3 +47,119 @@
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.05); /* Un léger fond transparent */
 }
+/* =========================================
+   NOUVEAU DESIGN PROFESSIONNEL (ALIOU TECH)
+   ========================================= */
+/* 1. Reset et Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a; /* Bleu très sombre pro */
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Oblige le footer à rester en bas */
+}
+
+/* 2. Header (L'en-tête) */
+.main-header {
+    background-color: #1e293b;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #38bdf8; /* Ligne bleue sous le header */
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.main-header nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.main-header nav a:hover {
+    color: #38bdf8;
+}
+
+/* 3. Contenu Principal (Le Calculateur) */
+.content {
+    flex: 1; /* Prend tout l'espace disponible au milieu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator-card {
+    background-color: #1e293b;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.calculator-card h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Inputs et Boutons */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+/* 4. Footer (Le bas de page) */
+.main-footer {
+    background-color: #1e293b;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #334155;
+}
+
+.main-footer p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.main-footer small {
+    color: #38bdf8;
+    font-weight: 600;
+}  
