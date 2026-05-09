@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur d'Âge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Le Calculateur d'Aliou</h1>
+
+  <p>Quelle est ton année de naissance ?</p>
+  <input type="number" id="boite_annee" placeholder="Ex: 2003">
+
+  <button onclick="calculer()">Voir mon âge en 2026</button>
+
+  <h2 id="zone_resultat"></h2>
+
+  <script>
+    function calculer() {
+        let annee = document.getElementById("boite_annee").value;
+        let resultat = document.getElementById("zone_resultat");
+        
+        // 1. Vérification si la case est vide
+        if (!annee) {
+            resultat.textContent = "Choisis une année d'abord ! 😊";
+            resultat.style.color = "#f8fafc"; // Blanc cassé
+            return;
+        }
+
+       
+        let age = 2026 - annee;
+
+        if (isNaN(age)) {
+         resultat.textContent = "Hé, ce n'est pas une année valide ! 🧐";
+        resultat.style.color = "#fbbf24";
+        return; // On arrête tout ici
+        }
+        // 2. Logique et Sécurité (textContent au lieu de innerHTML)
+        if (annee < 1900) {
+            resultat.textContent = "Oula, tu es un voyageur du temps ? 🚀";
+            resultat.style.color = "#fbbf24"; // Jaune orangé
+        }
+        else if (annee > 2026) {
+            resultat.textContent = "Attends... tu n'es pas encore né ! 🤔";
+            resultat.style.color = "#fbbf24"; // Jaune orangé
+        } 
+        else if (age < 18) {
+            resultat.textContent = "Tu as " + age + " ans, tu es encore mineur ! 😎";
+            resultat.style.color = "#f87171"; // Rouge clair
+        }
+        else if (age > 100) {
+            resultat.textContent = "Wow, " + age + " ans ? Respect, doyen ! 👴";
+            resultat.style.color = "#c084fc"; // Violet
+        } 
+        else {
+            resultat.textContent = "Tu as " + age + " ans en 2026. ✅";
+            resultat.style.color = "#4ade80"; // Vert
+        }
+    }
+  </script>
+</body>
+</html>
+

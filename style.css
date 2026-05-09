@@ -1,0 +1,49 @@
+
+  body {
+    background-color: #0f172a; /* Bleu nuit très foncé */
+    color: #f8fafc;            /* Blanc cassé pour la lecture */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  h1 { color: #38bdf8; } /* Titre en bleu ciel */
+
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+
+  button {
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s; /* Petit effet de transition */
+  }
+
+  button:hover {
+    background-color: #0ea5e9; /* Plus foncé au survol */
+    transform: scale(1.05);    /* Grossit un tout petit peu */
+  }
+
+  #zone_resultat {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  #zone_resultat {
+    transition: all 0.5s ease; /* Rend le changement de couleur fluide */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05); /* Un léger fond transparent */
+}
